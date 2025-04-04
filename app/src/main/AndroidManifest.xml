@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <permission
+        android:name="com.example.app.b.WEATHER_SERVICE_ACCESS"
+        android:protectionLevel="signature|knownSigner"
+        android:knownCerts="60:A6:87:4A:10:E9:32:46:1F:B2:61:44:0F:94:4E:D7:D8:CD:48:73:60:71:04:FA:14:42:FF:16:FE:36:6D:D1" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <service
+            android:name=".WeatherService"
+            android:permission="com.example.app.b.WEATHER_SERVICE_ACCESS"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+</manifest>
